@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libzip-dev \
     libpng-dev \
     libonig-dev \
-    && docker-php-ext-install intl pdo_mysql mysqli zip gd mbstring \
+    libpq-dev \
+    && docker-php-ext-install intl pdo_mysql mysqli pdo_pgsql pgsql zip gd mbstring \
     && a2enmod rewrite \
     && rm -rf /var/lib/apt/lists/*
 

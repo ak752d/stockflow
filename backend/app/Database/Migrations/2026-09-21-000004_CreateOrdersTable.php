@@ -35,8 +35,8 @@ class CreateOrdersTable extends Migration
                 'null'       => true,
             ],
             'status' => [
-                'type'       => 'ENUM',
-                'constraint' => ['pending', 'confirmed', 'shipped', 'delivered', 'cancelled'],
+                'type'       => 'VARCHAR',
+                'constraint' => 16,
                 'default'    => 'pending',
             ],
             'total' => [

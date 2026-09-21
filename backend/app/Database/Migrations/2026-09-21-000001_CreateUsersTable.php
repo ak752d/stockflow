@@ -28,8 +28,8 @@ class CreateUsersTable extends Migration
                 'constraint' => 255,
             ],
             'role' => [
-                'type'       => 'ENUM',
-                'constraint' => ['admin', 'staff'],
+                'type'       => 'VARCHAR',
+                'constraint' => 16,
                 'default'    => 'staff',
             ],
             'created_at' => [
